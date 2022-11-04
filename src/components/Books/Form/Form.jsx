@@ -9,7 +9,7 @@ const Form = () => {
       class="form flex"
       method="post">
         <div class="input flex">
-          <label for="book name">
+          <label for="book-name">
             <input
               name="fullname"
               class="wf"

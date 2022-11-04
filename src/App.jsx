@@ -15,7 +15,7 @@ function App() {
         </ul>
       </nav>
       <Routes>
-        <Route path="/" element={<Books />} />
+        <Route exact path="/" element={<Books />} />
         <Route path="/Categories" element={<Categories />} />
       </Routes>
     </div>
