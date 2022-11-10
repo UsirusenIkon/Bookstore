@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { checkStatus } from "../Redux/Categories/Categories";
+import { checkStatus } from "../../Redux/Categories/Categories";
 import Buttons from '../Buttons/Buttons';
 import './Categories.css'
 
