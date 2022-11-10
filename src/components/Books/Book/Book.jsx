@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import Buttons from "../../Buttons/Buttons";
-import { removeBook } from "../../Redux/Books/Book";
+import { removeBook } from "../../../Redux/Books/Book";
 
 const Book = ({ title, author, id }) => {
 
