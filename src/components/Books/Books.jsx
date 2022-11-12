@@ -1,3 +1,4 @@
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import Book from "./Book/Book";
@@ -13,16 +14,16 @@ const Books = () => {
   }, [books, dispatch]);
 
   return (
-  <div className="books">
-    {books.map(book => 
-      <Book title={book.title}
-      author={book.author} 
-      key={book.item_id}
-      id={book.item_id}      
-      />
-    )}
-    <Form />
-  </div>
+    <div className="books">
+      {books.map(book => 
+        <Book title={book.title}
+        author={book.author} 
+        key={book.item_id}
+        id={book.item_id}      
+        />
+      )}
+      <Form />
+    </div>
   )
 }
 

@@ -1,3 +1,4 @@
+import React from "react";
 const Buttons = ({name, className, onClick}) => {
 
   return (
