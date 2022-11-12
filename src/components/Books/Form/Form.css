@@ -2,6 +2,10 @@
   display: flex;
 }
 
+h3 {
+  color: rgb(109, 109, 109);
+}
+
 .form-container {
   margin: 1rem 0;
 }
@@ -15,4 +19,14 @@
 .input {
   gap: 0.4rem;
   flex-wrap: wrap;
+}
+
+.add-book {
+  padding: 0.3rem;
+  background-color:  rgb(0, 149, 255);
+  color: aliceblue;
+  border: none;
+  border-radius: 2px;
+  width: 100%;
+  max-width: 7rem;
 }

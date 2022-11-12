@@ -1,25 +1,25 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useState } from "react";
 import './Form.css'
 import Buttons from "../../Buttons/Buttons";
+import { addBook } from '../../../Redux/Books/Book';
 
 const Form = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
-  const books = useSelector((state) => state.books)
   const dispatch = useDispatch();
   
   const addBookHandler = (e) => {
     e.preventDefault();
-    dispatch({
-      type: 'bookstore/books/ADD_BOOK',
-      payload: {
-        id: books.length + 1,
+    dispatch(
+      addBook({
+        item_id: Math.floor(Math.random() * 100),
         title,
         author,
-      },
-    });
+        category: 'Action',
+      }),
+    );
 
     setTitle('');
     setAuthor('');
@@ -34,7 +34,7 @@ const Form = () => {
 
   return (
     <div className="form-container">
-      <h2>ADD NEW BOOK</h2>
+      <h3>ADD NEW BOOK</h3>
       <form
       onSubmit={addBookHandler}
       className="form flex"
@@ -67,7 +67,7 @@ const Form = () => {
             />
           </label>
         </div>
-      <Buttons className="reg-btn" type="submit" name="Add Book"/>
+      <Buttons className="add-book" type="submit" name="Add Book"/>
       </form>
     </div>
   )
