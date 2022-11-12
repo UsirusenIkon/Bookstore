@@ -1,25 +1,26 @@
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import { useState } from "react";
 import './Form.css'
 import Buttons from "../../Buttons/Buttons";
+import { addBook } from '../../../Redux/Books/Book';
 
 const Form = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
-  const books = useSelector((state) => state.books)
   const dispatch = useDispatch();
   
   const addBookHandler = (e) => {
     e.preventDefault();
-    dispatch({
-      type: 'bookstore/books/ADD_BOOK',
-      payload: {
-        id: books.length + 1,
+    dispatch(
+      addBook({
+        item_id: Math.floor(Math.random() * 100),
         title,
         author,
-      },
-    });
+        category: 'Action',
+      }),
+    );
 
     setTitle('');
     setAuthor('');
@@ -27,49 +28,42 @@ const Form = () => {
 
   const titleChangeHandler = (event) => {
     setTitle(event.target.value);
-    console.log(event.target.value);
   };
   const authorChangeHandler = (event) => {
     setAuthor(event.target.value);
-    console.log(event.target.value);
   };
 
   return (
     <div className="form-container">
-      <h2>ADD NEW BOOK</h2>
+      <h3>ADD NEW BOOK</h3>
       <form
       onSubmit={addBookHandler}
       className="form flex"
       method="post">
         <div className="input flex">
-          <label htmlFor="book-title">
-            <input
-              name="fullname"
-              className="wf"
-              type="text"
-              onChange={titleChangeHandler}
-              placeholder="Book Title"
-              maxLength="30"
-              id="book-title"
-              value={title}
-              required
-            />
-          </label>
-          <label htmlFor="author">
-            <input
-              name="email"
-              className="wf"
-              type="text"
-              value={author}
-              onChange={authorChangeHandler}
-              placeholder="Author"
-              maxLength="30"
-              id="author"
-              required
-            />
-          </label>
+          <input
+            className="bt"
+            type="text"
+            onChange={titleChangeHandler}
+            placeholder="Book Title"
+            maxLength="30"
+            id="book-title"
+            value={title}
+            required
+          />
+          <input
+            name="email"
+            className="wf"
+            type="text"
+            value={author}
+            onChange={authorChangeHandler}
+            placeholder="Author"
+            maxLength="30"
+            id="author"
+            required
+          />
         </div>
-      <Buttons className="reg-btn" type="submit" name="Add Book"/>
+      <Buttons className="add-book" type="submit" name="Add Book"/>
       </form>
     </div>
   )

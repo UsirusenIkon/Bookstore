@@ -1,6 +1,5 @@
 .books {
-  background-color: aliceblue;
-  filter: drop-shadow(2px 2px 2px);
-  margin: 7rem 1rem;
-  padding: 1rem;
+  padding: 7rem 1rem;
+  max-width: 968px;
+  margin: 0 auto;
 }
