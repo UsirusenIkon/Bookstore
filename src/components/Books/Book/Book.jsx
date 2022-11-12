@@ -9,7 +9,6 @@ const Book = ({ title, author, id }) => {
 
   const removeHandler = () => {
     dispatch(removeBook(id));
-    console.log(id);
   };
 
   return (
@@ -30,8 +29,8 @@ const Book = ({ title, author, id }) => {
       </div>
       <div className="flex percent">
       <div className="Oval-2"></div>
-          <p>100%</p>
-        </div>
+        <p>100%</p>
+      </div>
       <div className="progress flex">
         <p className="curr-ch">CURRENT CHAPTER</p>
         <p className="chap">Chapter 17</p>
