@@ -27,11 +27,9 @@ const Form = () => {
 
   const titleChangeHandler = (event) => {
     setTitle(event.target.value);
-    console.log(event.target.value);
   };
   const authorChangeHandler = (event) => {
     setAuthor(event.target.value);
-    console.log(event.target.value);
   };
 
   return (
