@@ -19,7 +19,6 @@ h3 {
 .input {
   gap: 1.4rem;
   width: calc(100% - 7.4rem);
-  /* flex-wrap: wrap; */
 }
 
 .bt {
