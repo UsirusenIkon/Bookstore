@@ -1,3 +1,50 @@
-h3 {
-  margin: 0.5rem 0;
+.bookcover {
+  margin: 1rem 0;
+  background-color: white;
+  padding: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.447);
+}
+
+.title {
+  color: rgb(84, 84, 85);
+  font-size: small;
+}
+
+.author {
+  color: black;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0.4rem 0;
+}
+
+.btn-grp {
+  gap: 1rem;
+}
+
+.book-btn {
+  color: rgb(0, 149, 255);
+  border: none;
+  background-color: inherit;
+}
+
+.progress {
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 3rem 0 0;
+}
+
+.curr-ch {
+  font-size: small;
+  color: rgb(128, 128, 128);
+}
+
+.pro-btn {
+  padding: 0.3rem;
+  background-color: rgb(0, 149, 255);
+  color: aliceblue;
+  border: none;
+  border-radius: 2px;
 }
