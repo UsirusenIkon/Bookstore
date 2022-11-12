@@ -20,6 +20,10 @@
   margin: 0.4rem 0;
 }
 
+.chap {
+  font-size: 0.7rem;
+}
+
 .btn-grp {
   gap: 1rem;
 }
@@ -30,10 +34,31 @@
   background-color: inherit;
 }
 
+.book-btn:not(:last-of-type) {
+  margin-right: 0.01rem;
+  border-right: 1px solid #ccc;
+  padding-right: 0.5em;
+}
+
+.percent {
+  align-items: center;
+}
+
+.Oval-2 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-style: solid;
+  border-radius: 50%;
+  border-width: 5px;
+  border-color: #379cf6;
+}
+
 .progress {
   flex-direction: column;
   justify-content: space-between;
   margin: 0 3rem 0 0;
+  border-left: 1px solid #ccc;
+  padding-left: 2rem;
 }
 
 .curr-ch {

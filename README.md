@@ -4,10 +4,6 @@
 
 A bookstore app where a user can view a set of books and read. 
 
-## Math Magicians
-
-## <a href="#">Live Demo</a>
-
 ## Built With
    - HTML, CSS (Flex Box & Grid)
    - JAVASCRIPT 

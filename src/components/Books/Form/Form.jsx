@@ -1,3 +1,4 @@
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useState } from "react";
 import './Form.css'
@@ -40,32 +41,27 @@ const Form = () => {
       className="form flex"
       method="post">
         <div className="input flex">
-          <label htmlFor="book-title">
-            <input
-              name="fullname"
-              className="wf"
-              type="text"
-              onChange={titleChangeHandler}
-              placeholder="Book Title"
-              maxLength="30"
-              id="book-title"
-              value={title}
-              required
-            />
-          </label>
-          <label htmlFor="author">
-            <input
-              name="email"
-              className="wf"
-              type="text"
-              value={author}
-              onChange={authorChangeHandler}
-              placeholder="Author"
-              maxLength="30"
-              id="author"
-              required
-            />
-          </label>
+          <input
+            className="bt"
+            type="text"
+            onChange={titleChangeHandler}
+            placeholder="Book Title"
+            maxLength="30"
+            id="book-title"
+            value={title}
+            required
+          />
+          <input
+            name="email"
+            className="wf"
+            type="text"
+            value={author}
+            onChange={authorChangeHandler}
+            placeholder="Author"
+            maxLength="30"
+            id="author"
+            required
+          />
         </div>
       <Buttons className="add-book" type="submit" name="Add Book"/>
       </form>
