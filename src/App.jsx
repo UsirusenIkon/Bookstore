@@ -4,7 +4,6 @@ import './App.css';
 import Books from './components/Books/Books';
 import Categories from './components/Categories/Categories';
 
-
 function App() {
   return (
     <div className="App">

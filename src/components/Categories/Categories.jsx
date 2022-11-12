@@ -12,6 +12,7 @@ const Categories = () => {
       checkStatus()
     );
   }
+
   return (
     <div>
       <p className='txt'>{category}</p>
