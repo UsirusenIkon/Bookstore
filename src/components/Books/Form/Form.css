@@ -40,13 +40,3 @@ h3 {
   width: 100%;
   max-width: 7rem;
 }
-
-.add-book {
-  padding: 0.3rem;
-  background-color: rgb(0, 149, 255);
-  color: aliceblue;
-  border: none;
-  border-radius: 2px;
-  width: 100%;
-  max-width: 7rem;
-}
