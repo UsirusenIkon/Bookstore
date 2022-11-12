@@ -1,14 +1,23 @@
+import { useSelector } from "react-redux";
 import Book from "./Book/Book";
 import './Books.css'
 import Form from "./Form/Form";
 
-const Books = (props) => {
+const Books = () => {
+  const books = useSelector((state) => state.books)
+
   return (
   <div className="books">
-    <Book />
+    {books.map(book => 
+      <Book title={book.title}
+      author={book.author} 
+      key={book.id}
+      id={book.id}      
+      />
+    )}
     <Form />
   </div>
   )
-} 
+}
 
 export default Books;
